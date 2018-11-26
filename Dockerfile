@@ -59,7 +59,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && composer config -g repo.packagist composer https://packagist.laravel-china.org
 
 # Make dir
-RUN mkdir -p /data/logs/php /data/cache/upload_tmp
+RUN mkdir -p /data/logs/php /data/cache/upload_tmp /data/webapps
 COPY php-fpm.conf /usr/local/etc/php-fpm.conf
 COPY php.ini /usr/local/etc/php/php.ini
 
